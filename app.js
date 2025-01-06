@@ -1,3 +1,4 @@
+let numeroSecreto = gerarumeroAleatorio();
 
 function exibirTexto(tag, texto){
     let campo = document.querySelector(tag);
@@ -9,6 +10,10 @@ exibirTexto('p', 'escolha um número entre 1 e 10');
 
 
 function verificarChute(){
-    console.log('o botão foi clicado');
+    let chute = document.querySelector('input').value;
+    console.log(chute == numeroSecreto);
 }
- 
+
+function gerarumeroAleatorio() {
+    return parseInt(Math.random() * 10 + 1);   
+}
